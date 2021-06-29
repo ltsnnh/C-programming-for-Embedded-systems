@@ -1,0 +1,37 @@
+# Find all the C files we want to compile
+SRCS    := $(shell find $(SRCDIR) -name *.c)
+
+# String substitution for every C files
+OBJS    := $(addprefix $(OBJDIR)/,$(patsubst %.c,%.o,$(notdir $(SRCS))))
+
+DEPS    := $(OBJS:.o=.d)
+
+# Add a prefix to INCDIR
+INC_FLAGS   := $(addprefix -I,$(INCDIR))
+# The -MMD and -MP flags together generate Makefiles for us!
+# These files will have .d instead of .o as the output.
+CPPFLAGS    := $(INC_FLAGS) -MMD -MP
+
+CC  = gcc
+CFLAGS = -Wall -g
+
+# The final build step.
+$(PRJDIR)/$(BINARY): $(OBJS)
+	$(CC) $(LDFLAGS) $(OBJDIR)/*.o -o $@
+
+# Build step for C source
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+
+.PHONY: clean clobber
+clean:
+	-rm $(OBJDIR)/*.o
+	-rm $(OBJDIR)/*.d
+
+clobber: clean
+	-rm $(PRJDIR)/$(BINARY)
+
+# Include the .d makefiles. The - at the front suppresses the errors of missing
+# Makefiles. Initially, all the .d files will be missing, and we don't want those
+# errors to show up.
+-include $(DEPS)
