@@ -25,11 +25,11 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 
 .PHONY: clean clobber
 clean:
-	-rm $(OBJDIR)/*.o
-	-rm $(OBJDIR)/*.d
+	-rm -f $(OBJDIR)/*.o
+	-rm -f $(OBJDIR)/*.d
 
 clobber: clean
-	-rm $(PRJDIR)/$(BINARY)
+	-rm -f $(PRJDIR)/$(BINARY)
 
 # Include the .d makefiles. The - at the front suppresses the errors of missing
 # Makefiles. Initially, all the .d files will be missing, and we don't want those
