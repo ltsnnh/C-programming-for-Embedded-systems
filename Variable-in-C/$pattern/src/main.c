@@ -1,12 +1,8 @@
-/*
-Pattern main
-*/
-
-#include "userincl.h"
+#include "main.h"
 
 int main(void)
 {
-	printf("\"Hello \
-		world!\"");
-	return 0;
+    printf("\"Hello \
+        world!\"");
+    return 0;
 }
