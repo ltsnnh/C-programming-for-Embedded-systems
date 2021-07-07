@@ -1,7 +1,11 @@
-#ifndef __SYSINCL_H__
-#define __SYSINCL_H__
+#ifndef __MAIN_H__
+#define __MAIN_H__
 
 #include <stdio.h>
 #include <stdint.h>
 
-#endif
+/********************************************************************
+ * 
+********************************************************************/
+
+#endif	/* __MAIN_H__ */
