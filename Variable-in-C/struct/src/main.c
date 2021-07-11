@@ -18,16 +18,12 @@ int main(void)
 		1997
 	};
 
-	// ngay_la_lung = {
-	// 	3,
-	// 	"June",
-	// 	2016
-	// };
-
 	printf("sizeof(struct ngay) = %ld\n", sizeof(struct ngay));		//24
 	printf("Ngay den: %d %s %ld\n", ngay_den.ngay_thu, ngay_den.ten_thang, ngay_den.nam);
 	printf("Ngay di: %d %s %ld\n", ngay_di.ngay_thu, ngay_di.ten_thang, ngay_di.nam);
-	//printf("Ngay la lung: %d %s %ld\n", ngay_la_lung.ngay_thu, ngay_la_lung.ten_thang, ngay_la_lung.nam);
+	printf("Ngay la lung: ngay thang nam? ");	// Nhap: 3 June 2016
+	scanf("%d%s%ld%*c", &ngay_la_lung.ngay_thu, ngay_la_lung.ten_thang, &ngay_la_lung.nam);
+	printf("Ngay la lung: %d %s %ld\n", ngay_la_lung.ngay_thu, ngay_la_lung.ten_thang, ngay_la_lung.nam);
 
 	return 0;
 }

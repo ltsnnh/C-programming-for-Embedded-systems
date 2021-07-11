@@ -36,5 +36,23 @@ int main(void)
     /* nhap mang nguyen b 3 chieu kich thuoc m x n x k */
     task_3(m, n, k, b);
 
+    /* giai phong con tro cap phat dong a */
+    for (i = 0; i < m; i++)
+    {
+        free(a[i]);
+    }
+    free(a);
+
+    /* giai phong con tro cap phat dong b */
+    for (i = 0; i < m; i++)
+    {
+        for(j = 0; j < n; j++)
+        {
+            free(b[i][j]);
+        }
+        free(b[i]);
+    }
+    free(b);
+
 	return 0;
 }
