@@ -4,4 +4,15 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#endif /* __MAIN_H__ */
+/********************************************************************
+ * 
+********************************************************************/
+
+/**
+ * Fills the handler with GIF information
+ * 
+ * @param filename GIF File name to be loaded
+ * @return Inited GIF Handler or NULL for error
+ */
+
+#endif	/* __MAIN_H__ */
