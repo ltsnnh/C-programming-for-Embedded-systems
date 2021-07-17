@@ -71,7 +71,7 @@ void printList(node_t *current)
     /* current point from first node to last node */
     while(current != NULL)
     {
-        printf("%2hhd\t%s\t%s\t%.1f\n", \
+        printf("%-5hhd%-25s%-15s\t%.2f\n", \
             current->student.code, current->student.name, current->student.account, current->student.score);
         current = current->next;
     }
