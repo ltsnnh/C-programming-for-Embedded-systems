@@ -8,3 +8,4 @@ TOPDIR  := $(realpath $(CURDIR))
 clean:
 	-rm -f $(TOPDIR)/*/*/*/*.o
 	-rm -f $(TOPDIR)/*/*/*/*.d
+	-rm -f $(TOPDIR)/*/*/*.txt
