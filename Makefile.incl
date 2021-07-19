@@ -27,7 +27,6 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 clean:
 	-rm -f $(OBJDIR)/*.o
 	-rm -f $(OBJDIR)/*.d
-	-rm -f $(PRJDIR)/*.txt
 
 clobber: clean
 	-rm -f $(PRJDIR)/$(BINARY)

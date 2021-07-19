@@ -49,6 +49,16 @@ int main(void)
         fputc(c, f2);
     }
 
+    /* if use feof() functon */
+    /* khong thuc su chinh xac, f2 se dai hon f1 1 ky tu ma 255 */
+    /* do ham feof() chi dc cap nhat gia tri sau 1 cau lenh doc */
+    /*
+    while(!feof(fi))
+    {
+        fputc(fgetc(f1), f2);
+    }
+    */
+
     fclose(f1);
     fclose(f2);
 
