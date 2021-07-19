@@ -13,8 +13,8 @@ int main(void)
 {
     FILE *fvb, *fnp;    /* Khai bao 2 bien con tro tep */
 
-    fvb = fopen("vb.txt", "wt");    /* Mo tep vb, ghi theo kieu van ban */
-    fnp = fopen("np.txt", "wb");    /* Mo tep np, ghi theo kieu nhi phan */
+    fvb = fopen("vb.txt", "wt");    /* Mo tep vb, ghi theo KIEU VAN BAN */
+    fnp = fopen("np.txt", "wb");    /* Mo tep np, ghi theo KIEU NHI PHAN */
 
     /* Ghi cac ky tu len tep vb */
     fputc('A', fvb);
