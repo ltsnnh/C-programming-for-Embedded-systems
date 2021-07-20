@@ -58,7 +58,7 @@
 #### unlink - remove
 	int unlink(const char *file_name)
 	@return: 0 | EOF
-	remove(const char *file_name)
+	void remove(const char *file_name)
 #### rewind
 	void rewind(FILE *fp)
 #### fseek
@@ -75,6 +75,7 @@
 #### getc - fgetc
 	int fgetc(FILE *fp)
 	@return: int | EOF
+---
 ### TEXT
 #### fprintf
 	int fprintf(FILE *fp, "...", ...)
@@ -88,6 +89,7 @@
 #### fgets
 	char *fgets(char *s, int n, FILE *fp)
 	@return: & | NULL (error hoac EOF)
+---
 ### BINARY
 #### putw
 	int putw(int n, FILE *fp)
@@ -101,3 +103,14 @@
 #### fread
 	int fread(void *ptr, int size, int n, FILE *fp)
 	@return: int so mau tin thuc su doc dc ( <= n)
+---
+### STREAMS AND THREADS
+#### flockfile
+	void flockfile(FILE *stream)
+#### ftrylockfile
+	int ftrylockfile(FILE *stream)
+	@return: 0 | != 0
+#### funlockfile
+	void funlockfile(FILE *stream)
+---
+![Streams and Threads](https://live.staticflickr.com/65535/51324940210_c8e838dfd8_h.jpg)
