@@ -5,8 +5,9 @@ int main(void)
     char arr1[12] = "Ltsnnh";
     //char arr2[12] = "Ltsnnh1";
     char arr2[12] = {};
+    // gets(arr2);  // gets() not get ENTER, but dangerous and should not be used.
     scanf("%s%*c", arr2);
-    // fgets(arr2, 12, stdin);  // fgets get enter
+    // fgets(arr2, 12, stdin);  // fgets() get enter
 
     if(strcmp(arr1,arr2)) // 0 -> Same | 1 -> Different
     {
