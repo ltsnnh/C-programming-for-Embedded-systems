@@ -6,6 +6,7 @@ int main(void)
     //char arr2[12] = "Ltsnnh1";
     char arr2[12] = {};
     scanf("%s%*c", arr2);
+    // fgets(arr2, 12, stdin);  // fgets get enter
 
     if(strcmp(arr1,arr2)) // 0 -> Same | 1 -> Different
     {
