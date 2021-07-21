@@ -8,15 +8,15 @@
 int main(void)
 {
     int n;
-    char arr[128] = {};
+    int arr[10] = {};
     FILE *f1, *f2;
 
     f1 = fopen("input.txt", "rb");
     f2 = fopen("output.txt", "wb");
 
-    while((n = fread(arr, 1, 16, f1)) > 0)
+    while((n = fread(arr, 4, 4, f1)) > 0)
     {
-        fwrite(arr, 1, n, f2);
+        fwrite(arr, 4, n, f2);
         fputc('\n', f2);
     }
 

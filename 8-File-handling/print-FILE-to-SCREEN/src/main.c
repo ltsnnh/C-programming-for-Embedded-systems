@@ -3,7 +3,7 @@
 #include <string.h>
 #include "common.h"
 
-/* MODE NHI PHAN */
+/* MODE BINARY */
 
 int main(void)
 {

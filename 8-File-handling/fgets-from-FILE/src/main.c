@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include "common.h"
 
+/* MODE TEXT */
+
 int main(void)
 {
     int i = 0;
-    char str[50];
+    char str[10];
     FILE *fp;
 
     fp = fopen("input.txt", "r");
@@ -23,7 +25,7 @@ int main(void)
     while(1)
     {
         i++;
-        fgets(str, 50, fp);
+        fgets(str, 8, fp);
         if(feof(fp))
             break;
         printf("Dong %d: %s", i, str);

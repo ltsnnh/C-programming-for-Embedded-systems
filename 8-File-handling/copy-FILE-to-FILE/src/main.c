@@ -4,7 +4,7 @@
 #include <string.h> /* strcspn() */
 #include "common.h"
 
-/* MODE NHI PHAN */
+/* MODE BINARY */
 
 int main(void)
 {
@@ -19,7 +19,7 @@ int main(void)
     }
     else
     {
-        t1[strcspn(t1, "\n")] = '\0';
+        t1[strcspn(t1, "\n")] = '\0';   /* strcspn() returns the number of characters in string str1 which are not in the string str2. */
     }
 
     printf("TEP DICH: ");
@@ -29,7 +29,7 @@ int main(void)
     }
     else
     {
-        t2[strcspn(t2, "\n")] = '\0';
+        t2[strcspn(t2, "\n")] = '\0';   /* replace '\n' >> '\0' */
     }
 
     f1 = fopen(t1, "rb");

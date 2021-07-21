@@ -10,7 +10,7 @@ int main(void)
 
     for( ; i < 10; i++)
     {
-        fprintf(fp, "Column %2d\n", i);
+        fprintf(fp, "Column %2d\r\n", i);
     }
 
     fclose(fp);
