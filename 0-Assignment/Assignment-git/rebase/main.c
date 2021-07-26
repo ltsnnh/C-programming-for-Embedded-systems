@@ -2,6 +2,7 @@
 
 int main()
 {
-	/* code */
+	printf("Feature A");
+
 	return 0;
 }
