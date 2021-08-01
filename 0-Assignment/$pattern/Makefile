@@ -29,7 +29,7 @@ CPPFLAGS    := $(INC_FLAGS) -MMD -MP
 
 CC  = gcc
 CXX = g++
-CFLAGS = -std=c99 -Wall -g
+CFLAGS = -Wall -g
 CXXFLAGS = -Wall -g
 
 # The final build step.
