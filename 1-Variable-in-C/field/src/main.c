@@ -1,14 +1,14 @@
 #include "main.h"
 
-union
+union   /* union */
 {
-    struct
+    struct  /* struct */
     {
         uint32_t a1;
         uint32_t a2;
     } s;
 
-    struct
+    struct  /* field */
     {
         uint32_t n1:16;
         uint32_t:16;
